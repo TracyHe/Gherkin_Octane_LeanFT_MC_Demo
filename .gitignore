@@ -1,1 +1,5 @@
-"" 
+## Ignoring eclipse specific project files ##
+.classpath
+.project
+.settings
+ 
