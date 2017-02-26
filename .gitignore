@@ -3,3 +3,16 @@
 .project
 .settings
  
+## Ignoreing intelliJ specific project files ##
+.idea
+
+## Ignoring leanft testresults ##
+RunResults*
+
+## Ignoring Octane Cucumber results ##
+gherkinNGAResults.xml_
+
+## Ignoring target directory ##
+target
+
+

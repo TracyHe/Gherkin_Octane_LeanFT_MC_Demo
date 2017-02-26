@@ -3,6 +3,7 @@ package hpe.software.leanft;
 import com.hp.lft.sdk.Environment;
 import com.hp.lft.sdk.GeneralLeanFtException;
 import com.hp.lft.sdk.mobile.Device;
+import com.hp.lft.sdk.mobile.DeviceDescription;
 import com.hp.lft.sdk.mobile.MobileLab;
 import com.hp.lft.sdk.web.Browser;
 import com.hp.lft.sdk.web.BrowserFactory;
@@ -59,8 +60,9 @@ public class CucumberBrowserFactory {
 			return device;
 
 		if ("iPad".equalsIgnoreCase(environment)) {
-			String iPadSerial = "eec2605aa907525438d677e4929d53d41305b466";
-			device = MobileLab.lockDeviceById(iPadSerial);
+			DeviceDescription description = new DeviceDescription();
+			description.setModel("iPad");
+			device = MobileLab.lockDevice(description);
 		}
 		return device;
 	}
